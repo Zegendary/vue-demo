@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    img.vue(src="../static/images/logo.png")
+    img.vue(src="./assets/logo.png")
     Father
 </template>
 
@@ -18,7 +18,7 @@ export default {
 <style lang="scss">
   *{margin:0;padding: 0}
   body{
-    background-image: url("../static/images/background.png");
+    background-image: url("/static/images/background.png");
     #app {
       font-family: 'Avenir', Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;

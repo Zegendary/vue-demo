@@ -15,9 +15,9 @@
         logoNow: -1,
         logoListFlag: false,
         logoData: [
-          {imgSrc: '../../static/images/360_logo.png'},
-          {imgSrc: '../../static/images/baidu_logo.png'},
-          {imgSrc: '../../static/images/sougou_logo.png'}
+          {imgSrc: '/static/images/360_logo.png'},
+          {imgSrc: '/static/images/baidu_logo.png'},
+          {imgSrc: '/static/images/sougou_logo.png'}
         ]
       }
     },
