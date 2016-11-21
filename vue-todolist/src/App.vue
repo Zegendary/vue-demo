@@ -7,19 +7,27 @@
         {{item.label}}
       </li>
     </ul>
+    <component-a msgfromfather="Im Your Father" v-on:msgfromchild='childsay'></component-a>
+    <p>
+      child say {{childmsg}}
+    </p>
   </div>
 </template>
 
 <script>
 import Storage from './storage.js'
+import componentA from './components/componentA'
+
 export default {
   data () {
     return {
       msg: 'Welcome to Your ToDoList',
       items: Storage.fetch() == null ? []: Storage.fetch(),
-      newItem: ''
+      newItem: '',
+      childmsg: ''
     }
   },
+  components:{ componentA },
   watch: {
     items: {
       handler(items){
@@ -38,6 +46,9 @@ export default {
         isFinished: false
       })
       this.newItem = ''
+    },
+    childsay (msg){
+      this.childmsg = msg
     }
   }
 }
@@ -54,5 +65,8 @@ export default {
 }
 .finished{
   text-decoration: underline;
+}
+p{
+  color: deeppink;
 }
 </style>
